@@ -6,6 +6,7 @@ class Body extends Component {
         return(
         <div id="cuerpo">
             Este es el componente del Body
+            <h1>Hola Mundoooo!</h1>
         </div>
         );
     }
