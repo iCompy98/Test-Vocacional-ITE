@@ -8,6 +8,7 @@ class Body extends Component {
             Este es el componente del Body
             <h1>Hola Mundoooo!</h1>
 <h2> Me la pelas carnal al chile </h2>
+<h3>Hola amigos  </h3>
         </div>
         );
     }
