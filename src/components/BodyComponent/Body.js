@@ -7,6 +7,7 @@ class Body extends Component {
         <div id="cuerpo">
             Este es el componente del Body
             <h1>Hola Mundoooo!</h1>
+<h2> Me la pelas carnal al chile </h2>
         </div>
         );
     }
