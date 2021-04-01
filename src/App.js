@@ -17,7 +17,7 @@ function App() {
 
       <Title id="title"/>
       <Body id="cuerpo"  />
-      <Question_Radio id="preguntas"/>
+      
     </div>
 
 
