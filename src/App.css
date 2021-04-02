@@ -14,7 +14,7 @@
   height: 100%;
   width: 75%;
   float: right;
-  background: linear-gradient(to bottom, blue, white);
+  background: linear-gradient(to bottom,#3991FB, white);
 }
 
 #title {
