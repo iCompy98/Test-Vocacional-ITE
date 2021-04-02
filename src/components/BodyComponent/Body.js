@@ -11,8 +11,8 @@ class Body extends Component {
             
         </div> */
 
-        //<Login/>
-        <Question_Radio id="preguntas"/>
+        <Login/>
+        //<Question_Radio id="preguntas"/>
         //<div></div>
         
         );

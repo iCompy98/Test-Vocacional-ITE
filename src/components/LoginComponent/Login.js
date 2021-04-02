@@ -1,14 +1,18 @@
 import React from 'react';
 
 
-class Login extends React.Component {
 
+import {Link} from "react-router";
+
+class Login extends React.Component {
+ 
     state ={
         username: "",
         password: "",
     }
 
     alerta = (e) => {
+
         e.preventDefault();
         this.setState(
             {
@@ -17,9 +21,11 @@ class Login extends React.Component {
             }
         )
     }
+
+    
     render(){
         return (
-        <div >
+        <div id     ="Login">
             <form > 
                 <h3>Inicio de sesión  {this.state.username +" "+this.state.password }</h3>
                 <div>
@@ -35,7 +41,12 @@ class Login extends React.Component {
                 </div>
                     <input type="text" name="user" id="pass" />
                 <div>
+                    <navigator >
                     <input type="submit" value="Ingresar" onClick={this.alerta} />
+                    
+                       {/* // <nav input type="submit" value="Ingresar" onClick></nav> */}
+                    </navigator>
+                    
                 </div>
             </form>
         </div> 
@@ -45,3 +56,14 @@ class Login extends React.Component {
 }
 
 export default Login;
+
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,8 @@ class Question_Radio extends Component{
 
 
     //Valor predeterminado de radio button es nulo, para que aparezca en blanco
-    state ={
+    state =
+    {
 
         value : ""
 
@@ -66,14 +67,7 @@ class Question_Radio extends Component{
                         onChange = {this.onChange}
                         />
                     </label>
-
-
-
-
-
-
             </form>
-
             </div>
         )
     }
