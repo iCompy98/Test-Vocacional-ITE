@@ -16,8 +16,8 @@ class Body extends Component
             
         </div> */
 
-        //  <Login/>
-         <DemoCarousel id = "carousel"/>
+          <Login/>
+        // <DemoCarousel id = "carousel"/>
        // <Question_Radio id="preguntas"/>
         //<div></div>
         

@@ -28,7 +28,7 @@ class Login extends React.Component
         return (
         <div id     ="Login">
          <center > <form > 
-                <h2>Test Vocacional</h2>
+                <h2 id="titulo">Test Vocacional</h2>
                 <h3>Inicio de sesión  {this.state.username +" "+this.state.password }</h3>
                 <div>
                 <label >
