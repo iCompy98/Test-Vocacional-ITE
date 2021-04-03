@@ -7,15 +7,18 @@ import Question_Radio from './components/QuestionComponent/Question_Radio';
 
 
 function App() {
+
+
   return (
   
   <div id="principal">
 
-    <Menu id="menu"/>
+    <Menu id="menu" direccion="home"/>
     <div id="often">
 
 
       <Title id="title"/>
+      
       <Body id="cuerpo"  />
       
     </div>

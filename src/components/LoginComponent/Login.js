@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Button} from 'react';
+import { Link } from 'react-router-dom';
 
 
 class Login extends React.Component {
@@ -6,6 +7,11 @@ class Login extends React.Component {
     state ={
         username: "",
         password: "",
+    }
+
+
+    cambio= () => {
+        console.log("Hola!");
     }
 
     alerta = (e) => {
@@ -16,10 +22,13 @@ class Login extends React.Component {
                 password: document.getElementById("pass").value
             }
         )
+        
+        
     }
+
     render(){
         return (
-        <div >
+        <div id="hola">
             <form > 
                 <h3>Inicio de sesión  {this.state.username +" "+this.state.password }</h3>
                 <div>
@@ -33,9 +42,13 @@ class Login extends React.Component {
                     Contraseña
                     </label>
                 </div>
-                    <input type="text" name="user" id="pass" />
+                    <input type="text" name="user" id="pass"  />
                 <div>
-                    <input type="submit" value="Ingresar" onClick={this.alerta} />
+                    <Link to="/Cuestionario">
+                        <a >
+                            Insertar
+                        </a>
+                    </Link>
                 </div>
             </form>
         </div> 
