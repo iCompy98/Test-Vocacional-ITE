@@ -1,6 +1,7 @@
 import React from 'react';
-
-
+import cerebro from '../../icons/cerebro.png'
+import usuario from '../../icons/user.png'
+import invisible from '../../icons/invisible.png'
 
 import {Link} from "react-router";
 
@@ -26,32 +27,36 @@ class Login extends React.Component
     
     render(){
         return (
-        <div id     ="Login">
-         <center > <form > 
-                <h2 id="titulo">Test Vocacional</h2>
-                <h3>Inicio de sesión  {this.state.username +" "+this.state.password }</h3>
+
+        
+        <div>
+          <form > 
+               <center><h2 style={{ color: 'white', fontSize: 30 }}>Test Vocacional <img src={cerebro} id="img"/> </h2> </center>
+    
+                <h3 style={{ color: 'white', fontSize: 25}}>¡Hola Amigo(a)!  {this.state.username +" "+this.state.password }</h3>
                 <div>
-                <label >
-                    Nombre de usuario:
+                <label  style={{paddingRight:20, color:'blue', fontStyle:'bold', fontSize:20}}>
+                    CURP:
                     </label>
-                </div>
-                    <input type="text" name="user" id="user" />
+                
+                    <input type="text" name="user" id="user" /> <img src={usuario} id="img"/>
+                    </div>
                 <div>
-                    <label>
+                    <label style={{paddingRight:20, color:'blue', fontStyle:'bold', fontSize:20}}>
                     Contraseña:
                     </label>
-                </div>
-                    <input type="text" name="user" id="pass" />
+               
+                    <input type="text" name="user" id="pass" /> <img src={invisible} id="img"/>
+                    </div>
                 <div>
                     <navigator >
-                    <input type="submit" value="Ingresar" onClick={this.alerta} id="sub" />
+                    <center> <input type="submit" value="Ingresar" onClick={this.alerta} id="sub" style={{backgroundColor:'white', fontSize:20}}/></center>
                     
                        {/* // <nav input type="submit" value="Ingresar" onClick></nav> */}
                     </navigator>
                     
                 </div>
             </form>
-           </center>
         </div> 
         
         )

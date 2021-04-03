@@ -1,7 +1,8 @@
 #Login {
-  text-align: center;
 }
 #user {
+  padding-left: 150;
+  align-items: center;
 }
 
 #pass {
@@ -9,6 +10,8 @@
 
 #sub {
 }
-#titulo {
+#labels {
   color: white;
+  font-style: oblique;
+  padding: 200;
 }
