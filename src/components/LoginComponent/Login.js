@@ -1,20 +1,19 @@
-import React, {Button} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 
-class Login extends React.Component {
 
+import {Link} from "react-router";
+
+class Login extends React.Component 
+{
+ 
     state ={
         username: "",
         password: "",
     }
 
-
-    cambio= () => {
-        console.log("Hola!");
-    }
-
     alerta = (e) => {
+
         e.preventDefault();
         this.setState(
             {
@@ -22,14 +21,14 @@ class Login extends React.Component {
                 password: document.getElementById("pass").value
             }
         )
-        
-        
     }
 
+    
     render(){
         return (
-        <div id="hola">
-            <form > 
+        <div id     ="Login">
+         <center > <form > 
+                <h2 id="titulo">Test Vocacional</h2>
                 <h3>Inicio de sesión  {this.state.username +" "+this.state.password }</h3>
                 <div>
                 <label >
@@ -39,18 +38,20 @@ class Login extends React.Component {
                     <input type="text" name="user" id="user" />
                 <div>
                     <label>
-                    Contraseña
+                    Contraseña:
                     </label>
                 </div>
-                    <input type="text" name="user" id="pass"  />
+                    <input type="text" name="user" id="pass" />
                 <div>
-                    <Link to="/Cuestionario">
-                        <a >
-                            Insertar
-                        </a>
-                    </Link>
+                    <navigator >
+                    <input type="submit" value="Ingresar" onClick={this.alerta} id="sub" />
+                    
+                       {/* // <nav input type="submit" value="Ingresar" onClick></nav> */}
+                    </navigator>
+                    
                 </div>
             </form>
+           </center>
         </div> 
         
         )
@@ -58,3 +59,14 @@ class Login extends React.Component {
 }
 
 export default Login;
+
+
+
+
+
+
+
+
+
+
+

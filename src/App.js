@@ -4,23 +4,23 @@ import Menu from './components/MenuComponent/Menu';
 import Title from './components/TitleComponent/Title';
 import Body from './components/BodyComponent/Body';
 import Question_Radio from './components/QuestionComponent/Question_Radio';
+import Login from './components/LoginComponent/Login';
 
 
-function App() {
-
-
+function App()
+ {
   return (
   
   <div id="principal">
 
-    <Menu id="menu" direccion="home"/>
+    <Menu id="menu"/>
     <div id="often">
 
 
       <Title id="title"/>
-      
       <Body id="cuerpo"  />
       
+     
     </div>
 
 

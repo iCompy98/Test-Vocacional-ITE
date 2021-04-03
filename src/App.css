@@ -8,19 +8,19 @@
   height: 100%;
   width: 25%;
   float: left;
+  background: linear-gradient(to bottom,#3991FB, white);
 }
 
 #often {
   height: 100%;
   width: 75%;
   float: right;
-  background-color: blueviolet;
+  background: linear-gradient(to bottom,#3991FB, white);
 }
 
 #title {
   padding-top: 1vh;
-  background-color: #050;
-}
+  }
 
 #cuerpo {
   padding-bottom: 1vh;
