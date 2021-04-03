@@ -4,7 +4,8 @@ import React from 'react';
 
 import {Link} from "react-router";
 
-class Login extends React.Component {
+class Login extends React.Component 
+{
  
     state ={
         username: "",

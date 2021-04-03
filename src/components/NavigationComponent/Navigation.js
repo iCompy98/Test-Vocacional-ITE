@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from "react-router";
 
-export const Left = (props) =>{
+export const Left = (props) =>
+{
     return(
 
         <nav className = " Prueba_navegacion_por_default"> 
