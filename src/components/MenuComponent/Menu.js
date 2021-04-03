@@ -7,7 +7,7 @@ class Menu extends React.Component{
 
     render(){
         return (<div id="menu">
-            Este es el componente del Menu
+    
             <img src={logo} id="imagen"/>
         </div>);
     }

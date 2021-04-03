@@ -26,7 +26,8 @@ class Login extends React.Component {
     render(){
         return (
         <div id     ="Login">
-            <form > 
+         <center > <form > 
+                <h2>Test Vocacional</h2>
                 <h3>Inicio de sesión  {this.state.username +" "+this.state.password }</h3>
                 <div>
                 <label >
@@ -36,19 +37,20 @@ class Login extends React.Component {
                     <input type="text" name="user" id="user" />
                 <div>
                     <label>
-                    Contraseña
+                    Contraseña:
                     </label>
                 </div>
                     <input type="text" name="user" id="pass" />
                 <div>
                     <navigator >
-                    <input type="submit" value="Ingresar" onClick={this.alerta} />
+                    <input type="submit" value="Ingresar" onClick={this.alerta} id="sub" />
                     
                        {/* // <nav input type="submit" value="Ingresar" onClick></nav> */}
                     </navigator>
                     
                 </div>
             </form>
+           </center>
         </div> 
         
         )
