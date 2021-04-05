@@ -3,9 +3,8 @@ import cerebro from '../../icons/cerebro.png'
 import usuario from '../../icons/user.png'
 import invisible from '../../icons/invisible.png'
 
-
 class Login extends React.Component 
-{
+{ 
  
     state ={
         username: "",
@@ -48,7 +47,7 @@ class Login extends React.Component
                     <input type="text" name="user" id="pass" style={{fontSize:30}}/> <img src={invisible} id="img"/>
                     </div>
 
-                    <div><text style={{paddingLeft: 380, color: 'blue'}}>¿Olvidaste tu contraseña?</text></div>
+                    <div><text style={{paddingLeft: 380, color: 'blue'}}  >¿Olvidaste tu contraseña?</text></div>
                 <div>
                     <navigator >
                     <center> <input type="submit" value="Ingresar" onClick={this.alerta} id="sub" style={{backgroundColor:'white', fontSize:20}}/></center>
