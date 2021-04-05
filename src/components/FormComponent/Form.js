@@ -36,7 +36,7 @@ const Form = () => {
 				});
 			} 
 
-			else 
+			else     
 			{
 				cambiarPassword2((prevState) => 
 				{
