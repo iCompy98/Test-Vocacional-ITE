@@ -3,6 +3,7 @@ import Question_Radio from '../QuestionComponent/Question_Radio';
 import './Body.css';
 import Login from '../LoginComponent/Login';
 import DemoCarousel from '../DemoCarosuelComponent/DemoCarousel';
+import Form from '../FormComponent/Form';
 
 
 
@@ -20,6 +21,7 @@ class Body extends Component
         // <DemoCarousel id = "carousel"/>
        // <Question_Radio id="preguntas"/>
         //<div></div>
+       // <Form/>
         
         );
     }
