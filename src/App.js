@@ -10,9 +10,9 @@ import Login from './components/LoginComponent/Login';
 function App()
  {
   return (
-  
+    
   <div id="principal">
-
+<meta name="viewport" content="width=device-width, initial-scale=0.60"></meta>
     <Menu id="menu"/>
     <div id="often">
 
