@@ -7,7 +7,7 @@ import Input from '../InputComponent/Input';
 import ShowPasswordElement from '../Elements/ShowPasswordElement';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import ComboBox from './ComboBox';
+import ComboBox from '../ComboBoxComponent/ComboBox';
 
 library.add(faEye,faEyeSlash,faExclamationTriangle ); 
 
