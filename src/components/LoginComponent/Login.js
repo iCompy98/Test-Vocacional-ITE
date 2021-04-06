@@ -2,20 +2,25 @@ import React, {useState} from 'react';
 import cerebro from '../../icons/cerebro.png'
 import usuario from '../../icons/user.png'
 import invisible from '../../icons/invisible.png'
-import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from '../Elements/FormElement';
+import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, Iconopassword} from '../Elements/FormElement';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle, faEye,faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Input from '../InputComponent/Input';
+import ShowPasswordElement from '../Elements/ShowPasswordElement';
 
-<<<<<<< HEAD
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+library.add(faEye,faEyeSlash ); 
+
+// <<<<<<< HEAD
 
 
+// // class Login extends React.Component 
+// // {
+// =======
 // class Login extends React.Component 
-// {
-=======
-class Login extends React.Component 
-{ 
->>>>>>> 72300c8b31b6d947ae2485d90a6b9d9f2ef47b13
+// { 
+// >>>>>>> 72300c8b31b6d947ae2485d90a6b9d9f2ef47b13
  
 //     state ={
 //         username: "",
@@ -42,7 +47,7 @@ class Login extends React.Component
 //           <form > 
 //                <center><h2 style={{ color: 'white', fontSize: 30 }}>Test Vocacional <img src={cerebro} id="img"/> </h2> </center>
     
-<<<<<<< HEAD
+
 //                 <h3 style={{ color: 'white', fontSize: 25}}>¡Hola Amigo(a)!  {this.state.username +" "+this.state.password }</h3>
 //                 <div>
 //                 <label  style={{paddingRight:20, color:'blue', fontStyle:'bold', fontSize:20}}>
@@ -103,7 +108,7 @@ class Login extends React.Component
 const Login = () => {
 
 
-
+const [Password_Input_Type, Toggle_Input_Icon] = ShowPasswordElement();
 const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
 
 const [password, cambiarPassword] = useState({campo: '', valido: null});
@@ -163,17 +168,22 @@ const onSubmit = (e) =>
 					expresionRegular={expresiones.usuario}
 				/>
                 <br></br>
+				
 
 <Input
 					estado={password}
 					cambiarEstado={cambiarPassword}
-					tipo="password"
+					//tipo="password"
 					label="Contraseña"
 					name="password1"
 					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
 					expresionRegular={expresiones.password}
+					tipo={Password_Input_Type}
 				/>
 
+	 
+				<span className="password-toogle-icon">{Toggle_Input_Icon} </span>
+			
 
 				{
 					formularioValido === false && <MensajeError>
@@ -185,8 +195,17 @@ const onSubmit = (e) =>
 
                     <ContenedorBotonCentrado>
 					
-						<Boton type="submit">Enviar</Boton>
+						<Boton type="submit">Ingresar</Boton>
+
+
+						<br>
+						</br>
+
+						<h5>¿No tienes cuenta? Registrate -- 	Aquí </h5> 	
 						{formularioValido === true && <MensajeExito>Registro Completado</MensajeExito>
+
+
+						
 				}
 
 

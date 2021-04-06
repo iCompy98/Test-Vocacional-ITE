@@ -15,3 +15,14 @@
   font-style: oblique;
   padding: 200;
 }
+#password-toogle-icon{
+ 
+  position: absolute;
+	right: 10px;
+	bottom: 14px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+  
+
+}

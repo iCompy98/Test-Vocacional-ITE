@@ -17,11 +17,11 @@ class Body extends Component
             
         </div> */
 
-          <Login/>
+        //  <Login/>
         // <DemoCarousel id = "carousel"/>
        // <Question_Radio id="preguntas"/>
         //<div></div>
-       // <Form/>
+        <Form/>
         
         );
     }

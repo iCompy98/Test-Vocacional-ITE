@@ -2,16 +2,26 @@ import React, {useState} from 'react';
 import cerebro from '../../icons/cerebro.png'
 import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from '../Elements/FormElement';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle,  faEye,faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Input from '../InputComponent/Input';
+import ShowPasswordElement from '../Elements/ShowPasswordElement';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import ComboBox from './ComboBox';
+
+library.add(faEye,faEyeSlash,faExclamationTriangle ); 
+
 
 const Form = () => {
+
+	const [Password_Input_Type, Toggle_Input_Icon] = ShowPasswordElement();
 	const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
 	const [nombre, cambiarNombre] = useState({campo: '', valido: null});
 	const [password, cambiarPassword] = useState({campo: '', valido: null});
 	const [password2, cambiarPassword2] = useState({campo: '', valido: null});
 	const [correo, cambiarCorreo] = useState({campo: '', valido: null});
 	const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
+	const [primera_opcion_de_carrera, primera_carrera] = useState({campo: '', valido: null})
 	// const [terminos, cambiarTerminos] = useState(false);
 	const [formularioValido, cambiarFormularioValido] = useState(null);
 
@@ -21,7 +31,8 @@ const Form = () => {
 		nombre: /^[A-Z][a-zA-ZÀ-ÿ\s]{1,40}$/, // Nota: La primera letra es mayúscula, debe tener espacios y puede llevar acentos.
 		password: /^.{4,12}$/, // 4 a 12 digitos.
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-		telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+		telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+		ing: /^((Ingenieria en Sistemas Computacionales ){1}|(Electronica){1}|(Electromecanica){1})$/
 	}
 
 	const validarPassword2 = () => 
@@ -61,6 +72,7 @@ const Form = () => {
 			password.valido === 'true' &&
 			password2.valido === 'true' &&
 			correo.valido === 'true' &&
+			primera_opcion_de_carrera.valido === 'true'&&
 			telefono.valido === 'true' 
 			//terminos
 		){
@@ -71,7 +83,7 @@ const Form = () => {
 			cambiarPassword2({campo: '', valido: 'null'});
 			cambiarCorreo({campo: '', valido: null});
 			cambiarTelefono({campo: '', valido: null});
-
+			primera_carrera({campo: '', valido: ''});
 			// ... 
 		}
 
@@ -109,21 +121,26 @@ const Form = () => {
 				<Input
 					estado={password}
 					cambiarEstado={cambiarPassword}
-					tipo="password"
+					//tipo="password"
+					tipo={Password_Input_Type}
 					label="Contraseña"
 					name="password1"
 					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
 					expresionRegular={expresiones.password}
 				/>
+					<span className="password-toogle-icon">{Toggle_Input_Icon} </span>
 				<Input
 					estado={password2}
 					cambiarEstado={cambiarPassword2}
-					tipo="password"
+					//tipo="password"
+					tipo={Password_Input_Type}
 					label="Repetir Contraseña"
 					name="password2"
 					leyendaError="Ambas contraseñas deben ser iguales."
 					funcion={validarPassword2}
+					
 				/>
+				<span className="password-toogle-icon">{Toggle_Input_Icon} </span>
 				<Input
 					estado={correo}
 					cambiarEstado={cambiarCorreo}
@@ -134,7 +151,7 @@ const Form = () => {
 					leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
 					expresionRegular={expresiones.correo}
 				/>
-				<Input
+				{/* <Input
 					estado={telefono}
 					cambiarEstado={cambiarTelefono}
 					tipo="text"
@@ -143,8 +160,13 @@ const Form = () => {
 					name="telefono"
 					leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
 					expresionRegular={expresiones.telefono}
-				/>
+				/> */}
 
+			
+			
+
+				
+				<ComboBox></ComboBox>
 
 
 				

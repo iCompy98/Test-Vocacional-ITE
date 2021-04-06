@@ -10,7 +10,7 @@ const colores = {
 const Formulario = styled.form`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+	gap: 100px;
 
 	@media (max-width: 800px){
 		grid-template-columns: 1fr;
@@ -151,9 +151,32 @@ const MensajeError = styled.div`
 	b {
 		margin-left: 10px;
 	}
+
+
 `;
 
+
+
+const Iconopassword = styled(FontAwesomeIcon)`
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+
+	${props => props.valido === 'false' && css`
+		opacity: 1;
+		color: ${colores.error};
+	`}
+
+	${props => props.valido === 'true' && css`
+		opacity: 1;
+		color: ${colores.exito};
+	`}
+`;
 export {
+	Iconopassword,
 	Formulario,
 	Label,
 	GrupoInput,

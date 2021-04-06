@@ -1,6 +1,6 @@
 #principal {
-  height: 100vh;
-  width: 10hw;
+  height: 270vh;
+  width: 100hw;
   margin: 0;
 }
 
@@ -14,7 +14,7 @@
 #often {
   height: 100%;
   width: 75%;
-  float: right;
+    float: right;
   background: linear-gradient(to bottom,#3991FB, white);
 }
 
