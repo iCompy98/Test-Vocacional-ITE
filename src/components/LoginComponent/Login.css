@@ -1,11 +1,11 @@
 #Login {
 }
-#user {
-  padding-left: 150;
-  align-items: center;
+#users {
+  color: blue;
 }
 
-#pass {
+#usuario {
+  color: blue;
 }
 
 #sub {
