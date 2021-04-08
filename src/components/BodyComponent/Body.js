@@ -4,6 +4,7 @@ import './Body.css';
 import Login from '../LoginComponent/Login';
 import DemoCarousel from '../DemoCarosuelComponent/DemoCarousel';
 import Form from '../FormComponent/Form';
+import Recover_password from '../RecoverPasswordComponent/Recover_password';
 
 
 
@@ -12,17 +13,18 @@ class Body extends Component
     render ()
     {
         return(
-        /* <div id="cuerpo" pregunta = {Question_Radio}>
-            Este es el componente del Body
-            
-        </div> */
+            /* <div id="cuerpo" pregunta = {Question_Radio}>
+                Este es el componente del Body
+                
+            </div> */
 
-        //  <Login/>
-        // <DemoCarousel id = "carousel"/>
-       // <Question_Radio id="preguntas"/>
-        //<div></div>
-        <Form/>
-        
+            //<Login/>
+            //    <DemoCarousel id = "carousel"/>
+             <Question_Radio id="preguntas"/>
+            //<div></div>
+            //    <Form/>
+            // <Recover_password/>
+            
         );
     }
 }

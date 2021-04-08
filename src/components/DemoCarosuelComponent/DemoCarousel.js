@@ -13,15 +13,15 @@ class DemoCarousel extends Component {
         // <div id="carousel">
             <Carousel>
                 <div >
-                    <img src={uno} id= ""/>
+                    <img src={null} id= ""/>
                     <p className="legend">Legend 1</p>
                 </div>
                 <div>
-                    <img src={tres} />
+                    <img src={null} />
                     <p className="legend">Legend 2</p>
                 </div>
                 <div>
-                    <img src={dos} />
+                    <img src={null} />
                   <p className="legend">Legend 3</p>
                 </div>
             </Carousel>
