@@ -5,7 +5,7 @@ class Title extends Component {
     render(){
         return (
             <div id="title">
-               <center> <h1>Instituto Tecnológico de Mexico campus Ensenada</h1></center>
+               <center> <h1>Tecnológico Nacional de México Campus Ensenada</h1></center>
             </div>
         );
     }

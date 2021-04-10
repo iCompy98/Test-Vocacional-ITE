@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const colores = {
 	borde: "#0075FF",
 	error: "#bb2929",
-	exito: "#1ed12d"
+	exito: "ffff"
 }
 
 const Formulario = styled.form`
+	
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+	gap: 100px;
 
 	@media (max-width: 800px){
 		grid-template-columns: 1fr;
@@ -20,7 +21,7 @@ const Formulario = styled.form`
 const Label = styled.label`
 	display: block;
 	font-weight: 700;
-	padding: 10px;
+	padding: 0px;
 	min-height: 40px;
 	cursor: pointer;
 
@@ -35,13 +36,13 @@ const GrupoInput = styled.div`
 `;
 
 const Input = styled.input`
-	width: 100%;
+	 width: 81%;
 	background: #fff;
 	border-radius: 3px;
-	height: 45px;
-	line-height: 45px;
-	padding: 0 40px 0 10px;
-	transition: .3s ease all;
+	 height: 45px;
+	 line-height: 45px;
+	 padding: 0 40px 0 10px;
+	 transition: .3s ease all;
 	border: 3px solid transparent;
 
 	&:focus {
@@ -93,17 +94,7 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 	`}
 `;
 
-const ContenedorTerminos = styled.div`
-	grid-column: span 2;
 
-	input {
-		margin-right: 10px;
-	}
-
-	@media (max-width: 800px){
-		grid-column: span 1;
-	}
-`;
 
 const ContenedorBotonCentrado = styled.div`
 	display: flex;
@@ -151,16 +142,20 @@ const MensajeError = styled.div`
 	b {
 		margin-left: 10px;
 	}
+
+
 `;
 
+
+
 export {
+	
 	Formulario,
 	Label,
 	GrupoInput,
 	Input,
 	LeyendaError,
 	IconoValidacion,
-	ContenedorTerminos,
 	ContenedorBotonCentrado,
 	Boton,
 	MensajeExito,

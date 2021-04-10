@@ -2,16 +2,20 @@ import React, {useState} from 'react';
 import cerebro from '../../icons/cerebro.png'
 import usuario from '../../icons/user.png'
 import invisible from '../../icons/invisible.png'
-import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from '../Elements/FormElement';
+import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, Iconopassword} from '../Elements/FormElement';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle, faEye,faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Input from '../InputComponent/Input';
+import ShowPasswordElement from '../Elements/ShowPasswordElement';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+library.add(faEye,faEyeSlash ); 
 
 const Login = () => {
 
 
-
+const [Password_Input_Type, Toggle_Input_Icon] = ShowPasswordElement();
 const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
 
 const [password, cambiarPassword] = useState({campo: '', valido: null});
@@ -23,7 +27,7 @@ const [formularioValido, cambiarFormularioValido] = useState(null);
 const expresiones = {
     usuario: /^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$/, // Letras, numeros, guion y guion_bajo
   
-    password: /^.{4,12}$/, // 4 a 12 digitos.
+    password: /^.{4,20}$/, // 4 a 20 digitos.
 
 }
 
@@ -57,6 +61,7 @@ const onSubmit = (e) =>
 
         <main>
             <center><h2 style={{ color: 'white', fontSize: 30 }}>Test Vocacional <img src={cerebro} id="img"/> </h2> </center>
+		<center>
 			<Formulario action="" onSubmit={onSubmit}>
 				
                
@@ -72,6 +77,7 @@ const onSubmit = (e) =>
                 
 				/>
                 <br></br>
+				
 
 <Input
 					estado={password}
@@ -79,9 +85,16 @@ const onSubmit = (e) =>
 					tipo="password"
 					label="Contraseña:"
 					name="password1"
-					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
+					leyendaError="La contraseña tiene que ser de 4 a 20 dígitos."
 					expresionRegular={expresiones.password}
-				/>
+					tipo={Password_Input_Type}
+				>
+
+
+
+				<span className="password-toogle-icon">{Toggle_Input_Icon} </span>
+			</Input>
+
 
 				{
 					formularioValido === false && <MensajeError>
@@ -93,14 +106,25 @@ const onSubmit = (e) =>
 
                     <ContenedorBotonCentrado>
 					
-						<Boton type="submit">Enviar</Boton>
+						<Boton type="submit">Ingresar</Boton>
+
+
+						<br>
+						</br>
+
+						<h5>¿No tienes cuenta? Registrate -- 	Aquí </h5> 	
 						{formularioValido === true && <MensajeExito>Registro Completado</MensajeExito>
+
+
+						
 				}
 
 
 </ContenedorBotonCentrado>
 
                 </Formulario>
+
+				</center>
         </main>
 
 
