@@ -20,9 +20,10 @@ class Body extends Component
 
             //<Login/>
             //    <DemoCarousel id = "carousel"/>
-             <Question_Radio id="preguntas"/>
+             //<Question_Radio id="preguntas"/>
+             //<Login/>
             //<div></div>
-            //    <Form/>
+                <Form/>
             // <Recover_password/>
             
         );
