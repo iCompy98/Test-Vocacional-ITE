@@ -48,7 +48,7 @@ const Form = () => {
 		telefono: /^[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}$/, // 7 a 14 numeros.
 		}
 
-	const validarPassword2 = () => 
+	/* const validarPassword2 = () => 
 	{
 		if(password.campo.length > 0)
 		{
@@ -69,7 +69,7 @@ const Form = () => {
 			}
 		}
 	}
-
+ */
 
 
 	const onSubmit = (e) => 

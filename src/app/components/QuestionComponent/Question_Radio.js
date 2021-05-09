@@ -5,17 +5,11 @@ class Question_Radio extends Component{
 
 
     //Valor predeterminado de radio button es nulo, para que aparezca en blanco
-    state =
-    {
-
-        value : ""
-
-
-    };
+    
 
     //Si se llegase a presionar el radio button se genera un cambio en su valor
 
-    onChange = e => {
+    onChange = (e) => {
 
         this.setState({value : e.target.value});
     }
